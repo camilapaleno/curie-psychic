@@ -6,6 +6,8 @@ import Eye from "./eye.json";
 const { Configuration, OpenAIApi } = require("openai");
 
 function Curie() {
+
+    
     
     const [ name , setName ] = useState([''])
     const [ showPrompt , setShowPrompt] = useState('promptHide')
@@ -48,10 +50,9 @@ function Curie() {
         event.preventDefault()
         const formData = new FormData(event.target),
         formDataObj = Object.fromEntries(formData.entries())
-        console.log(formDataObj.readingTopic)
 
         const configuration = new Configuration({
-            apiKey: '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',
+            apiKey: `${process.env.REACT_APP_API_KEY}`,
           });
         
         const openai = new OpenAIApi(configuration);
