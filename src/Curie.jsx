@@ -51,7 +51,7 @@ function Curie() {
         console.log(formDataObj.readingTopic)
 
         const configuration = new Configuration({
-            apiKey: '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',
+            apiKey: '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',
           });
         
         const openai = new OpenAIApi(configuration);
